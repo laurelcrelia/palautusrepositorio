@@ -37,3 +37,15 @@ class TestStatistics(unittest.TestCase):
     def test_returns_correct_amount_of_top_scorers(self):
         scorers = self.statistics.top(4)
         self.assertAlmostEqual(len(scorers), 4)
+
+    def test_sorts_by_points(self):
+        sorted_by_points = self.statistics.top(4, 1)
+        self.assertAlmostEqual(str(sorted_by_points[0]), "Gretzky EDM 35 + 89 = 124")
+
+    def test_sorts_by_goals(self):
+        sorted_by_goals = self.statistics.top(5, 2)
+        self.assertAlmostEqual(str(sorted_by_goals[0]), "Lemieux PIT 45 + 54 = 99")
+    
+    def test_sorts_by_assists(self):
+        sorted_by_assists = self.statistics.top(5, 3)
+        self.assertAlmostEqual(str(sorted_by_assists[0]), "Gretzky EDM 35 + 89 = 124")

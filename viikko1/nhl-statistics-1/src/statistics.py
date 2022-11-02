@@ -1,13 +1,13 @@
 
 
-
 def sort_by_points(player):
     return player.points
 
 
 class Statistics:
-    def __init__(self, _players):
-        self._players = _players
+    def __init__(self, reader):
+        self._reader = reader
+        self._players = self._reader.get_players()
 
     def search(self, name):
         for player in self._players:
@@ -33,7 +33,7 @@ class Statistics:
 
         result = []
         i = 0
-        while i <= how_many:
+        while i < how_many:
             result.append(sorted_players[i])
             i += 1
 

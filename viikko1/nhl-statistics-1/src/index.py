@@ -1,11 +1,12 @@
-from statistics import Statistics
 from player_reader import PlayerReader
+from statistics import Statistics
+
 
 
 def main():
-    reader = PlayerReader()
-    players = reader.get_players()
-    stats = Statistics(players)
+    # reader = PlayerReader()
+    # players = reader.get_players()
+    stats = Statistics(PlayerReader())
     philadelphia_flyers_players = stats.team("PHI")
     top_scorers = stats.top(10)
 

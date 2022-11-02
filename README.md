@@ -1,3 +1,3 @@
 # palautusrepositorio
 
-(https://github.com/laurelcrelia/ohtuvarasto.git)
+[ohtuvarasto-repositorio](https://github.com/laurelcrelia/ohtuvarasto.git)

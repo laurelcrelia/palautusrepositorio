@@ -1,7 +1,6 @@
 from urllib import request
 from project import Project
 
-
 class ProjectReader:
     def __init__(self, url):
         self._url = url
@@ -13,3 +12,6 @@ class ProjectReader:
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
         return Project("Test name", "Test description", [], [])
+
+if __name__ == "__main__":
+    ProjectReader.get_project()

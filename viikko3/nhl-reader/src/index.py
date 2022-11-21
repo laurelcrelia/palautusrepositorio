@@ -9,20 +9,20 @@ def main():
     print(response)
 
     players = []
+    players_nationality=[]
 
     for player_dict in response:
         player = Player(
-            player_dict['name']
-        )
+            player_dict['name'], player_dict['team'], player_dict['goals'], player_dict['assists'], player_dict["nationality"]
+            )
+        if player.nationality == "FIN":
+            players.append(player)
 
-        players.append(player)
-
-    print("Oliot:")
+    print("Oliot:") 
 
     for player in players:
         print(player)
 
 if __name__ == "__main__":
     main()
-
 

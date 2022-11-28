@@ -19,4 +19,10 @@ class TestOstoskori(unittest.TestCase):
         saldo = self.kori.tavaroita_korissa()
         self.assertEqual(saldo, 1)
 
+    def test_yksi_tuote_lisataan_ja_hinta_on_oikea(self):
+        self.setUp()
+        self.kori.lisaa_tuote(self.tuote1)
+        hinta = self.kori.hinta()
+        self.assertEqual(hinta, 1)
+
     
